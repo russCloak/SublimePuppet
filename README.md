@@ -1,9 +1,7 @@
 SublimePuppetSnippetsAndHighlights
 ==================================
 
-Puppet (puppetlabs.com) highlighting, snippets and completion for Sublime Text 2 & 3.
-
-Now with windows parsing support.
+[Puppet](puppetlabs.com) highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
 
 ### Plugin installation
 Please use [Package Control][pc] to install this plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.

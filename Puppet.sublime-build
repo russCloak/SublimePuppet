@@ -4,8 +4,7 @@
     "selector": "source.pp",
     "path": "/opt/local/bin:$PATH",
     "windows":
-    {    "cmd": ["C:\\ruby193\\bin\\puppet.bat", "parser", "validate", "--color=false", "$file" ],
-
-         "path": "C:\\ruby193\\bin;$PATH"
+    {    
+      "cmd": ["puppet.bat", "parser", "validate", "--color=false", "$file" ]
     }
 }

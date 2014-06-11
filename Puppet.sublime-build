@@ -2,5 +2,10 @@
     "cmd": [ "puppet", "parser", "validate", "--color=false", "--confdir=/tmp", "--vardir=/tmp", "$file" ],
     "working_dir": "${project_path:${folder:${file_path}}}",
     "selector": "source.pp",
-    "path": "/opt/local/bin:$PATH"
+    "path": "/opt/local/bin:$PATH",
+    "windows":
+    {    "cmd": ["C:\\ruby193\\bin\\puppet.bat", "parser", "validate", "--color=false", "$file" ],
+
+         "path": "C:\\ruby193\\bin;$PATH"
+    }
 }

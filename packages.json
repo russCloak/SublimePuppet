@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1",
+  "packages": [
+    {
+      "name": "Puppet Snippets And Highlights",
+      "description": "# Sublime Text package for Puppet highlighting and snippets.",
+      "author": "petems",
+      "homepage": "https://github.com/petems/SublimePuppetSnippetsAndHighlights",
+      "platforms" : "*"
+    }
+  ]
+}

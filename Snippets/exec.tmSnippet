@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>exec { "${1:name}":
-	command =&gt; "${2:/bin/echo}",
+	<string>exec { '${1:name}':
+	command =&gt; '${2:/bin/echo}',
 	#path =&gt; "/usr/bin:/usr/sbin:/bin:/usr/local/bin",
 	#refreshonly =&gt; true,
 }$0</string>

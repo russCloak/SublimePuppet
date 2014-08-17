@@ -4,7 +4,7 @@
     "selector": "source.pp",
     "path": "/opt/local/bin:$PATH",
     "windows":
-    {    
+    {
       "cmd": ["puppet.bat", "parser", "validate", "--color=false", "$file" ]
     }
 }

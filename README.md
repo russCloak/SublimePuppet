@@ -1,16 +1,38 @@
 SublimePuppet
-=============
+==================================
 
 [Puppet](puppetlabs.com) highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
 
 ### Plugin installation
-Please use [Package Control][pc] to install this plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
 
-To install via Package Control, do the following:
+#### Package Manager
 
-1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
+First, install the Package Control plugin, instructions here: http://wbond.net/sublime_packages/package_control.
 
-1. When the plugin list appears, type `puppet`. Among the entries you should see `SublimePuppet`. If that entry is not highlighted, use the keyboard or mouse to select it.
+Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimeLinter when the list appears. The advantage of using this method is that Package Control will automatically keep SublimePuppet up to date with the latest version.
+
+#### Manual
+
+**With Git:** Clone the repository in your Sublime Text "Packages" directory:
+
+    git clone https://github.com/SublimeLinter/SublimeLinter.git
+
+
+The "Packages" directory is located at:
+
+* OS X:
+
+        ~/Library/Application Support/Sublime Text 2/Packages/
+
+* Linux:
+
+        ~/.config/sublime-text-2/Packages/
+
+* Windows:
+
+        %APPDATA%/Sublime Text 2/Packages/
+
+**Without Git:** Download the latest source from [here](https://github.com/russCloak/SublimePuppet/archive/master.zip) and copy the `SublimePuppet` folder to your Sublime Text "Packages" directory.
 
 ### Puppet installation
 Before using this plugin, you must ensure that `puppet` is installed on your system. To install `puppet`, do the following:
@@ -19,7 +41,7 @@ Before using this plugin, you must ensure that `puppet` is installed on your sys
 
 1. Install `puppet` by typing the following in a terminal:
    ```
-   [sudo] gem  install puppet
+   gem install puppet
    ```
 
 1. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.

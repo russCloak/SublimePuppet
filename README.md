@@ -1,15 +1,17 @@
-SublimePuppetSnippetsAndHighlights
+SublimePuppet
 ==================================
 
 [Puppet](puppetlabs.com) highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
 
 ### Plugin installation
 
+#### Package Manager
+
+First, install the Package Control plugin, instructions here: http://wbond.net/sublime_packages/package_control.
+
+Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimeLinter when the list appears. The advantage of using this method is that Package Control will automatically keep SublimePuppet up to date with the latest version.
+
 #### Manual
-
-Use `git` to clone into your Sublime Text Packages directory:
-
-**Without Git:** Download the latest source from [here](https://github.com/petems/SublimePuppetSnippetsAndHighlights/archive/master.zip) and copy the `SublimePuppetSnippetsAndHighlights` folder to your Sublime Text "Packages" directory.
 
 **With Git:** Clone the repository in your Sublime Text "Packages" directory:
 
@@ -30,11 +32,7 @@ The "Packages" directory is located at:
 
         %APPDATA%/Sublime Text 2/Packages/
 
-#### Package Manager
-
-When [this](https://github.com/wbond/package_control_channel/pull/3523) gets merged, you'll be able to install the package with Package Control plugin, instructions here: http://wbond.net/sublime_packages/package_control.
-
-Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimeLinter when the list appears. The advantage of using this method is that Package Control will automatically keep PuppetSnippetsAndHighlights up to date with the latest version.
+**Without Git:** Download the latest source from [here](https://github.com/russCloak/SublimePuppet/archive/master.zip) and copy the `SublimePuppet` folder to your Sublime Text "Packages" directory.
 
 ### Puppet installation
 Before using this plugin, you must ensure that `puppet` is installed on your system. To install `puppet`, do the following:

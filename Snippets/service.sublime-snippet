@@ -7,7 +7,7 @@
 	#require    => Class['config'],
 \}
 ]]></content>
-    <tabTrigger>service</tabTrigger>
-    <scope>source.puppet</scope>
-    <description>service</description>
+		<tabTrigger>service</tabTrigger>
+		<scope>source.puppet</scope>
+		<description>service</description>
 </snippet>

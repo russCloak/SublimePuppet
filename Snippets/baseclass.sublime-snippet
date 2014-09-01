@@ -16,41 +16,41 @@
 class ${1:name} \{
     class install \{
         package \{
-            "${2:package}":
+            '${2:package}':
                 ensure => present;
         \}
     \}
 
     class config \{
         file \{
-            "/etc/${1:name}":
+            "/etc/${1:name}':
                 ensure  => directory,
                 owner   => root,
                 group   => root,
                 mode    => 700,
                 require => Class["install"];
 
-            "/etc/${1:name}/${3:config}":
+            "/etc/${1:name}/${3:config}':
                 ensure  => present,
                 owner   => root,
                 group   => root,
                 mode    => 600,
                 require => Class["install"];
-                #content => template ("${1:name}/${3:config}.erb");
+                #content => template ('${1:name}/${3:config}.erb");
                 #source => [
                 #   "puppet://$server/modules/${1:name}/\$\{fqdn\}.conf",
                 #   "puppet://$server/modules/${1:name}/${1:name}.conf"
                 #];
         \}
 
-        #logrotate::file { "${1:name}":
-        #   source => "/etc/logrotate.d/${1:name}",
+        #logrotate::file { '${1:name}':
+        #   source => "/etc/logrotate.d/${1:name}',
         #   log => "/var/log/${4:logfile}.log",
         #\}
     \}
 
     class service \{
-        service \{ "${1:name}":
+        service \{ '${1:name}':
             enable      => true,
             ensure      => running,
             #hasrestart => true,

@@ -157,14 +157,14 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>,</string>
+					<string>(?=,|\))</string>
 					<key>name</key>
 					<string>meta.function.argument.default.puppet</string>
 					<key>patterns</key>
 					<array>
 						<dict>
 							<key>include</key>
-							<string>#expression</string>
+							<string>#parameter-default-types</string>
 						</dict>
 					</array>
 				</dict>
@@ -203,7 +203,11 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#expression</string>
+			<string>#strings</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#variable</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -242,48 +246,6 @@
 	</array>
 	<key>repository</key>
 	<dict>
-		<key>arrays</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\[</string>
-					<key>end</key>
-					<string>\]</string>
-					<key>name</key>
-					<string>meta.structure.array.puppet</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#expression</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
-		<key>bracket-exp</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\(</string>
-					<key>end</key>
-					<string>\)</string>
-					<key>name</key>
-					<string>meta.group.braces.round</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#expression</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
 		<key>constants</key>
 		<dict>
 			<key>patterns</key>
@@ -339,104 +301,6 @@
 			<key>name</key>
 			<string>constant.character.escape.puppet</string>
 		</dict>
-		<key>expression</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#constants</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#strings</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#numbers</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#arrays</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#hashes</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#variable</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#function-call</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#resource-reference</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#bracket-exp</string>
-				</dict>
-			</array>
-		</dict>
-		<key>function-call</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>([a-z][a-z0-9_]*)\(</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>meta.function-call.function-name.puppet</string>
-						</dict>
-					</dict>
-					<key>contentName</key>
-					<string>meta.function-call.arguments.puppet</string>
-					<key>end</key>
-					<string>\)</string>
-					<key>name</key>
-					<string>meta.function-call.puppet</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#expression</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
-		<key>hashes</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\{</string>
-					<key>end</key>
-					<string>\}</string>
-					<key>name</key>
-					<string>meta.structure.hash.puppetbracket-exp</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#line_comment</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#expression</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
-		</dict>
 		<key>line_comment</key>
 		<dict>
 			<key>patterns</key>
@@ -476,15 +340,230 @@
 				</dict>
 			</array>
 		</dict>
-		<key>numbers</key>
+		<key>nested_braces</key>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_braces</string>
+				</dict>
+			</array>
+		</dict>
+		<key>nested_braces_interpolated</key>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_braces_interpolated</string>
+				</dict>
+			</array>
+		</dict>
+		<key>nested_brackets</key>
+		<dict>
+			<key>begin</key>
+			<string>\[</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_brackets</string>
+				</dict>
+			</array>
+		</dict>
+		<key>nested_brackets_interpolated</key>
+		<dict>
+			<key>begin</key>
+			<string>\[</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\]</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_brackets_interpolated</string>
+				</dict>
+			</array>
+		</dict>
+		<key>nested_parens</key>
+		<dict>
+			<key>begin</key>
+			<string>\(</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_parens</string>
+				</dict>
+			</array>
+		</dict>
+		<key>nested_parens_interpolated</key>
+		<dict>
+			<key>begin</key>
+			<string>\(</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.scope.puppet</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#nested_parens_interpolated</string>
+				</dict>
+			</array>
+		</dict>
+		<key>parameter-default-types</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>include</key>
+					<string>#strings</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#numbers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variables</string>
+				</dict>
+				<dict>
 					<key>match</key>
-					<string>-?\d+(?:\.\d+)?</string>
+					<string>=</string>
 					<key>name</key>
-					<string>constant.numeric.puppet</string>
+					<string>keyword.operator.assignment.php</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\[)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.array.begin.puppet</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\]</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.array.end.puppet</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>meta.array.php</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#parameter-default-types</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#constants</string>
 				</dict>
 			</array>
 		</dict>

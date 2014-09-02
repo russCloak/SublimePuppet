@@ -23,23 +23,23 @@ class ${1:name} \{
 
     class config \{
         file \{
-            "/etc/${1:name}':
+            '/etc/${1:name}':
                 ensure  => directory,
                 owner   => root,
                 group   => root,
                 mode    => 700,
                 require => Class["install"];
 
-            "/etc/${1:name}/${3:config}':
+            '/etc/${1:name}/${3:config}':
                 ensure  => present,
                 owner   => root,
                 group   => root,
                 mode    => 600,
-                require => Class["install"];
+                require => Class['install'];
                 #content => template ('${1:name}/${3:config}.erb");
                 #source => [
-                #   "puppet://$server/modules/${1:name}/\$\{fqdn\}.conf",
-                #   "puppet://$server/modules/${1:name}/${1:name}.conf"
+                #   'puppet://$server/modules/${1:name}/\$\{fqdn\}.conf',
+                #   'puppet://$server/modules/${1:name}/${1:name}.conf'
                 #];
         \}
 

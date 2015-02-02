@@ -39,17 +39,21 @@ Then download the code into place from the Git version control repository or by 
 This SublimePuppet package requires Puppet be intalled on your system in order to run syntax check commands. Follow the steps outlined in the [Puppet Labs guide to Installing Puppet](https://docs.puppetlabs.com/guides/install_puppet/pre_install.html). 
 
 ## Contributing
+
 If you would like to contribute enhancements or fixes, please do the following:
 
-1. Fork the plugin repository.
-1. Hack on a separate topic branch created from the latest `master`.
-1. Commit and push the topic branch.
-1. Make a pull request.
+1. Fork the [SublimePuppet package Github repository](https://github.com/russCloak/SublimePuppet).
+1. Hack on a separate topic branch created from the latest `master` branch.
+1. Commit and push your topic branch to your forked remote repository.
+1. Make a pull request on Github with a 
+    1. short descriptive title.
+    1. description outlining the purpose of your changes.
 1. Be patient.  ;-)
 
 Please note that modifications should follow these coding guidelines:
 
-- Indent is 4 spaces.
+- Indent is 4 spaces. 
+- Indent using spaces only.
 - Code should pass flake8 and pep257 linters.
 - Vertical whitespace helps readability, don’t be afraid to use it.
 - Please use descriptive variable names, no abbreviations unless they are very well known.

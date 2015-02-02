@@ -1,7 +1,7 @@
 SublimePuppet
-==================================
+=============
 
-[Puppet](puppetlabs.com) highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
+[Puppet][] highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
 
 ### Plugin installation
 
@@ -35,16 +35,8 @@ Then download the code into place from the Git version control repository or by 
 
 
 ### Puppet installation
-Before using this plugin, you must ensure that `puppet` is installed on your system. To install `puppet`, do the following:
 
-1. Install [Ruby](http://ruby-lang.org).
-
-1. Install `puppet` by typing the following in a terminal:
-   ```
-   gem install puppet
-   ```
-
-1. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
+This SublimePuppet package requires Puppet be intalled on your system in order to run syntax check commands. Follow the steps outlined in the [Puppet Labs guide to Installing Puppet](https://docs.puppetlabs.com/guides/install_puppet/pre_install.html). 
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
@@ -62,6 +54,4 @@ Please note that modifications should follow these coding guidelines:
 - Vertical whitespace helps readability, don’t be afraid to use it.
 - Please use descriptive variable names, no abbreviations unless they are very well known.
 
-[pc]: https://sublime.wbond.net/installation
-[locating-executables]: http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located
-[cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
+[Puppet]: https://puppetlabs.com/

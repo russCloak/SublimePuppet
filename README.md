@@ -13,26 +13,26 @@ Once you install Package Control, restart ST2 and bring up the Command Palette (
 
 #### Manual
 
-**With Git:** Clone the repository in your Sublime Text "Packages" directory:
+Sublime Puppet can be manually installed to your Sublime Text "Packages" directory. You can find and open the "Packages" directory from the Sublime Text menu at:
 
-    git clone https://github.com/SublimeLinter/SublimeLinter.git
+_Preferences_ | _Browse Packages..._
 
+Then download the code into place from the Git version control repository or by directly downloading a snapshot of the latest code: 
 
-The "Packages" directory is located at:
+**With Git:** 
 
-* OS X:
+1. Change your working directory to the Sublime Text "Packages" directory
+1. Clone the repository into your Sublime Text "Packages" directory:
 
-        ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+        git clone https://github.com/russCloak/SublimePuppet.git
 
-* Linux:
+**Without Git:** 
 
-        ~/.config/sublime-text-2/Packages/
+1. Download the [latest SublimePuppet source code](https://github.com/russCloak/SublimePuppet/archive/master.zip) archive.
+1. Unpack the downloaded archive to a local folder somewhere.
+1. Rename the unpacked folder `SublimePuppet-master` to the new name `SublimePuppet`.
+1. Move the `SublimePuppet` folder into your Sublime Text "Packages" directory.
 
-* Windows:
-
-        %APPDATA%/Sublime Text 2/Packages/
-
-**Without Git:** Download the latest source from [here](https://github.com/russCloak/SublimePuppet/archive/master.zip) and copy the `SublimePuppet` folder to your Sublime Text "Packages" directory.
 
 ### Puppet installation
 Before using this plugin, you must ensure that `puppet` is installed on your system. To install `puppet`, do the following:

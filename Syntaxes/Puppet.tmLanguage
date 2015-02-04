@@ -210,6 +210,10 @@
 			<string>#variable</string>
 		</dict>
 		<dict>
+			<key>include</key>
+			<string>#constants</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>(?i)\b(import|include)\b\s*</string>
 			<key>beginCaptures</key>

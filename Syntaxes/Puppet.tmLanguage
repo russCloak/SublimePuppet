@@ -191,7 +191,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(case|if|unless|else)(?!::)</string>
+			<string>\b(case|if|unless|else|elsif)(?!::)</string>
 			<key>name</key>
 			<string>keyword.control.puppet</string>
 		</dict>

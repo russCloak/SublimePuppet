@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>file_line {'${1:name}':
+	line      => '${2:}',
+	path      => '${3:absolute path to the file}',
+	#after    => ${4:undef},
+	#ensure   => '${5:present}',
+	#match    => ${6:undef}, # /.*match/
+	#multiple => ${7:undef}, # 'true' or 'false'
+	#name     => ${8:undef},
+	#replace  => ${9:true}, # 'true' or 'false'
+}$0</string>
+	<key>name</key>
+	<string>file_line</string>
+	<key>scope</key>
+	<string>source.puppet</string>
+	<key>tabTrigger</key>
+	<string>file_line</string>
+	<key>uuid</key>
+	<string>BFD62555-686B-4B85-B181-F61B3A50AB37</string>
+</dict>
+</plist>

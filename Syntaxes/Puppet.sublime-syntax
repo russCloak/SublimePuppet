@@ -76,7 +76,7 @@ contexts:
       captures:
         1: storage.type.puppet
         2: entity.name.section.puppet
-    - match: \b(case|if|unless|else|elsif)(?!::)
+    - match: \b(case|if|unless|else|elsif)\s+(?!::)
       scope: keyword.control.puppet
     - match: '((\$?)"?[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*"?):(?=\s+|$)'
       scope: entity.name.section.puppet

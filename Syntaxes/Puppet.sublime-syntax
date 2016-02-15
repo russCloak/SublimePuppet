@@ -83,7 +83,7 @@ contexts:
     - include: strings
     - include: variable
     - include: constants
-    - match: (?i)\b(import|include|require)\b\s*
+    - match: (?i)\b(import|include|require)\s+([::[a-z]]*)\b\s*
       captures:
         1: keyword.control.import.include.puppet
       push:

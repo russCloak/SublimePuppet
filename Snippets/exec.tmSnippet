@@ -6,6 +6,10 @@
 	<string>exec { '${1:name}':
 	command      =&gt; '${2:/bin/echo}',
 	#path        =&gt; '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+	#creates     =&gt; '/file/created',
+	#cwd         =&gt; '/path/to/run/from',
+	#user        =&gt; 'user_to_run_as',
+	#unless      =&gt; 'test param-that-would-be-true',
 	#refreshonly =&gt; true,
 }$0</string>
 	<key>name</key>

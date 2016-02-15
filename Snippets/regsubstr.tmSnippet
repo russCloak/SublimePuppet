@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>regsubst('${1:target}', '${2:regex}', '${3:replacement}')$0</string>
+	<key>name</key>
+	<string>regsubst</string>
+	<key>scope</key>
+	<string>source.puppet</string>
+	<key>tabTrigger</key>
+	<string>regsubst</string>
+	<key>uuid</key>
+	<string>2A97A8CA-8F12-408C-82CD-A9B17D6AC8C0</string>
+</dict>
+</plist>

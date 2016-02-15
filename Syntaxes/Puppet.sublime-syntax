@@ -76,7 +76,7 @@ contexts:
       captures:
         1: storage.type.puppet
         2: entity.name.section.puppet
-    - match: '^\s*(\w+)\s*{\s*([''"].+[''"]):'
+    - match: '^\s*(\w+)\s*{\s*([''"].+[''"])\s*:'
       scope: meta.definition.resource.puppet
       captures:
         1: storage.type.puppet

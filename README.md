@@ -21,7 +21,11 @@ Then download the code into place from the Git version control repository or by 
 
 **With Git:** 
 
-1. Change your working directory to the Sublime Text "Packages" directory
+1. Change your working directory to the Sublime Text "Packages" directory:
+
+   OSX:
+        cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+
 1. Clone the repository into your Sublime Text "Packages" directory:
 
         git clone https://github.com/russCloak/SublimePuppet.git

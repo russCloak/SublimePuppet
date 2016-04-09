@@ -102,7 +102,7 @@ contexts:
     - match: \b(escape|gsub|alert|crit|debug|notice|defined|emerg|err|failed|file|generate|info|realize|search|tag|tagged|template|warning)\b
       scope: support.function.puppet
   constants:
-    - match: (?i)\b(false|true|running|undef|present|absent|file|directory)\b
+    - match: (?i)\b(false|true|running|undef|present|absent|file|directory|installed|running|stopped)\b
       scope: constant.language.puppet
   double-quoted-string:
     - match: '"'

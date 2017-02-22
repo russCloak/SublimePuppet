@@ -201,7 +201,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(\w+)\s*{\s*(['"].+['"]):</string>
+			<string>^\s*(\S+)\s*{\s*(['"].+['"]):</string>
 			<key>name</key>
 			<string>meta.definition.resource.puppet</string>
 		</dict>

@@ -36,7 +36,7 @@ Then download the code into place from the Git version control repository or by 
 
 ### Puppet installation
 
-This SublimePuppet package requires Puppet be intalled on your system in order to run syntax check commands. Follow the steps outlined in the [Puppet Labs guide to Installing Puppet](https://docs.puppetlabs.com/guides/install_puppet/pre_install.html). 
+This SublimePuppet package requires Puppet be intalled on your system in order to run syntax check commands. Follow the steps outlined in the [Puppet Labs guide to Installing Puppet](https://docs.puppet.com/puppet/latest/install_pre.html). 
 
 ## Contributing
 

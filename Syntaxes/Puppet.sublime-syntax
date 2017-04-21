@@ -4,6 +4,7 @@
 name: Puppet
 file_extensions:
   - pp
+  - epp
 scope: source.puppet
 contexts:
   main:

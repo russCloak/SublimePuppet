@@ -1,15 +1,19 @@
 SublimePuppet
 =============
 
-[Puppet][] highlighting, snippets and completion for Sublime Text 2 & 3.  Now with windows parsing support.
+[Puppet][] highlighting, snippets and completion for Sublime Text 2 & 3.  
+
+Now with Windows parsing support.
 
 ### Plugin installation
 
 #### Package Manager
 
-First, install the Package Control plugin, instructions here: http://wbond.net/sublime_packages/package_control.
+First, install the Package Control plugin, instructions here: https://packagecontrol.io/installation
 
-Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimeLinter when the list appears. The advantage of using this method is that Package Control will automatically keep SublimePuppet up to date with the latest version.
+Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). 
+
+Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimePuppet when the list appears. The advantage of using this method is that Package Control will automatically keep SublimePuppet up to date with the latest version.
 
 #### Manual
 
@@ -58,4 +62,4 @@ Please note that modifications should follow these coding guidelines:
 - Vertical whitespace helps readability, don’t be afraid to use it.
 - Please use descriptive variable names, no abbreviations unless they are very well known.
 
-[Puppet]: https://puppetlabs.com/
+[Puppet]: https://puppet.com/

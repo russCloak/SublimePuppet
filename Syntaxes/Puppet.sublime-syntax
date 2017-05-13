@@ -100,7 +100,7 @@ contexts:
       scope: constant.other.key.puppet
     - match: '(?<={)\s*\w+\s*(?=})'
       scope: constant.other.bareword.puppet
-    - match: \b(escape|gsub|alert|crit|debug|notice|defined|emerg|err|failed|file|generate|info|realize|search|tag|tagged|template|warning)\b
+    - match: \b(escape|gsub|alert|crit|debug|notice|defined|emerg|err|failed|file|generate|info|realize|search|tag|tagged|template|epp|warning)\b
       scope: support.function.puppet
   constants:
     - match: (?i)\b(false|true|running|stopped|undef|present|absent|file|directory|link|installed|purged|latest|held|mounted|unmounted)\b

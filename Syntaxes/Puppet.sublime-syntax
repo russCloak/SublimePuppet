@@ -72,7 +72,7 @@ contexts:
                 3: keyword.operator.assignment.puppet
               pop: true
             - include: parameter-default-types
-    - match: '^\s*(\w+)\s*{\s*(\$[a-zA-Z_]+)\s*:'
+    - match: '^\s*(\S+)\s*{\s*(\$[a-zA-Z_]+)\s*:'
       scope: meta.definition.resource.puppet
       captures:
         1: storage.type.puppet

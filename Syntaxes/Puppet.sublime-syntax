@@ -30,6 +30,7 @@ contexts:
           pop: true
         - include: constants
         - include: strings
+        - include: line_comment
         - match: \b(inherits)\b\s+
           captures:
             1: storage.modifier.puppet

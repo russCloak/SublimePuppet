@@ -122,11 +122,11 @@ contexts:
     - match: \\.
       scope: constant.character.escape.puppet
   line_comment:
-    - match: ^((#).*$\n?)
-      scope: meta.comment.full-line.puppet
+    - match: ^\s*(((#).*$\n?))
       captures:
-        1: comment.line.number-sign.puppet
-        2: punctuation.definition.comment.puppet
+        1: meta.comment.full-line.puppet
+        2: comment.line.number-sign.puppet
+        3: punctuation.definition.comment.puppet
     - match: (#).*$\n?
       scope: comment.line.number-sign.puppet
       captures:
